@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Fatou Kiné Fofana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section avec les textes alignés à gauche et l'image à droite -->
+    <section class="intro-section">
+        <div class="intro-text">
+            <p class="small-text">Salut, je suis</p>
+            <h1 class="medium-text">Fatou Kiné Fofana</h1>
+            <h2 class="large-text"><span id="auto-type"></span></h2>
+        </div>
+        <div class="intro-image">
+            <img src="kine remove.png" alt="Fatou Kiné Fofana">
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="fatou.jpeg" alt="Fatou Kiné Fofana">
+                </div>
+                <div class="about-text">
+                    <h3 class="section-title">À Propos de Moi</h3>
+                    <p>
+                        Passionnée par le numérique, je suis actuellement en formation de Référent Digital à Simplon Sénégal. 
+                        Mon parcours est enrichi d’expériences variées en communication digitale, UI/UX design, marketing 
+                        digital et gestion de projets agiles. En parallèle, je poursuis une Licence en Communication Digitale 
+                        à l’Université Numérique Cheikh Hamidou Kane, avec pour ambition de contribuer activement à l’évolution 
+                        des entreprises à l’ère digitale.
+                    </p>
+                    <button class="download-button">
+                        <i class="fa fa-download"></i> Télécharger mon CV
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects">
+            <h3 class="section-titl">Projets</h3>
+            <div class="card-container">
+                <div class="card"><img src="saponeo.png" alt="">Projet Marketing digitale</div>
+                <div class="card"><img src="chic tendance hijab.png" alt="">Création d'un plan de Communication Digital</div>
+                <div class="card"><img src="RESASS.png" alt="">Créaion d'une identité visuelle</div>
+                <div class="card"><img src="vintage senegal.png" alt="">Crétion de User Story</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3 class="section-title">Compétences</h3>
+            <div class="skills-slider">
+                <div class="slide">Stratégie de communication digitale</div>
+                <div class="slide">Gestion de réseaux sociaux</div>
+                <div class="slide">Création de contenu digital</div>
+                <div class="slide">Marketing digital</div>
+                <div class="slide">Gestion de projets</div>
+                <div class="slide">Utilisation de Google Workspace</div>
+                <div class="slide">Montage vidéo</div>
+                <div class="slide">Design graphique</div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h3 class="section-title">Contactez-moi</h3>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Prénom & Nom</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Envoyer</button>
+                </form>
+            </div>
+        </section>
+        
+
+    <footer>
+        <p>&copy; 2024, Tous Droits Réservés, Fatou Kiné Fofana</p>
+    </footer>
+
+    <script>
+        // Texte à taper
+        const textToType = "Référente Digitale";
+        let index = 0;
+
+        function typeText() {
+            const element = document.getElementById("auto-type");
+            element.innerHTML += textToType.charAt(index);
+            index++;
+            if (index < textToType.length) {
+                setTimeout(typeText, 100); // Vitesse d'écriture (100ms par caractère)
+            } else {
+                // Attendre avant de recommencer
+                setTimeout(() => {
+                    element.innerHTML = "";
+                    index = 0;
+                    typeText();
+                }, 1000); // Pause d'1 seconde avant de recommencer
+            }
+        }
+
+        // Lancer l'effet d'écriture en boucle au chargement de la page
+        window.onload = typeText;
+    </script>
+</body>
+</html>
+
